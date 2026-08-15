@@ -1,0 +1,16 @@
+# Dependências de desenvolvimento (testes e empacotamento).
+# Instale com:  pip install -r requirements-dev.txt
+
+-r requirements.txt
+
+# Testes.
+pytest>=8.0
+
+# Usado por tests/fake_raw.py para gerar os pixels que substituem o LibRaw.
+# Já vem junto com o rawpy, mas é declarado por ser uma dependência direta
+# dos testes.
+numpy>=1.24
+
+# Geração do executável Windows. O mínimo 6.0 é obrigatório: o arquivo
+# CR2Converter.spec usa o formato de EXE/COLLECT da série 6.x.
+pyinstaller>=6.0
