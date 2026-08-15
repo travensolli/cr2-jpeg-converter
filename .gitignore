@@ -1,0 +1,40 @@
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Bytecode e caches
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Build / distribuição
+build/
+dist/
+*.egg-info/
+
+# Logs gerados pela aplicação
+logs/
+*.log
+
+# Arquivos de amostra dos testes (20–30 MB cada; ver tests/data/README.md)
+tests/data/*.CR2
+tests/data/*.cr2
+
+# Saídas de conversão eventualmente criadas na raiz durante testes manuais
+/saida/
+/out/
+*.jpg.*.tmp
+
+# Configurações locais do editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
