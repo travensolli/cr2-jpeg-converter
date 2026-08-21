@@ -8,6 +8,11 @@ Feita em Python com [rawpy](https://github.com/letmaik/rawpy) (LibRaw),
 [Pillow](https://python-pillow.org/), [PySide6](https://doc.qt.io/qtforpython-6/)
 e [piexif](https://github.com/hMatoba/Piexif).
 
+![Janela principal: lista de arquivos com nome, caminho, tamanho e status; pré-visualização com dados da câmera; painel de configurações](docs/screenshots/janela-principal.png)
+
+*A janela principal com um lote carregado: a pré-visualização mostra a foto
+selecionada com câmera, lente, dimensões, ISO, abertura e velocidade.*
+
 ---
 
 ## Índice
@@ -108,6 +113,21 @@ python -c "import rawpy; print('LibRaw', rawpy.libraw_version)"
 
 As configurações são salvas automaticamente e restauradas na próxima abertura.
 
+![Conversão em andamento: barra de progresso em 33%, status por arquivo na lista e botão Cancelar habilitado](docs/screenshots/conversao-em-andamento.png)
+
+*Durante a conversão, cada linha mostra seu status (Convertendo, Convertido…),
+a barra indica o progresso do lote e o botão `Cancelar` fica disponível — a
+interface continua respondendo o tempo todo.*
+
+![Resumo exibido ao final da conversão, com contagens de processados, convertidos, ignorados e erros](docs/screenshots/resumo-conclusao.png)
+
+*Ao final, o resumo traz as contagens do lote e o tempo total.*
+
+![Relatório da conversão: tabela com arquivo, status, mensagem e data/hora, e botão para salvar como CSV](docs/screenshots/relatorio.png)
+
+*O relatório detalha arquivo por arquivo — inclusive falhas e o motivo — e
+pode ser salvo como CSV.*
+
 ### Estrutura de subpastas
 
 Com a opção marcada, esta entrada:
@@ -141,6 +161,8 @@ arquivos de pastas diferentes tiverem o mesmo nome, o segundo recebe um sufixo
 ---
 
 ## As configurações, uma a uma
+
+![Painel de configurações completo: formato e qualidade, resolução, revelação do RAW, metadados, política para arquivos existentes e conversões simultâneas](docs/screenshots/painel-configuracoes.png)
 
 ### Qualidade JPEG (1–100, padrão 95)
 
@@ -325,6 +347,9 @@ cr2-jpeg-converter/
 │       ├── filesystem.py         Descoberta de arquivos
 │       ├── logger.py             Configuração de logging
 │       └── paths.py              Pastas de dados e logs
+│
+├── docs/
+│   └── screenshots/            Capturas de tela usadas neste README
 │
 └── tests/                      169 testes + 9 de integração opcional
 ```
